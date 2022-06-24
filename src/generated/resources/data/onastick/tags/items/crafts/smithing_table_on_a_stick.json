@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:smithing_table",
+    {
+      "id": "#c:smithing_tables",
+      "required": false
+    }
+  ]
+}

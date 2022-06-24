@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "onastick:sticks",
+  "ingredients": [
+    {
+      "tag": "onastick:sticks"
+    },
+    {
+      "tag": "onastick:crafts/grindstone_on_a_stick"
+    }
+  ],
+  "result": {
+    "item": "onastick:grindstone_on_a_stick"
+  }
+}

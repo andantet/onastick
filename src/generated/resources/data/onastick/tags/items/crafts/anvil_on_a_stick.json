@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:anvil",
+    {
+      "id": "#c:anvils",
+      "required": false
+    },
+    "#minecraft:anvil"
+  ]
+}

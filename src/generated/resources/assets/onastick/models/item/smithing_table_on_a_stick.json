@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "onastick:item/smithing_table_on_a_stick"
+  }
+}

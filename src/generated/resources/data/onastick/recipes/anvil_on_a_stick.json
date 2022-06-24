@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "onastick:sticks",
+  "ingredients": [
+    {
+      "tag": "onastick:sticks"
+    },
+    {
+      "tag": "onastick:crafts/anvil_on_a_stick"
+    }
+  ],
+  "result": {
+    "item": "onastick:anvil_on_a_stick"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+
+  "id": "onastick",
+  "version": "${version}",
+  "license": [
+    "MIT (Code)",
+    "All Rights Reserved (Assets)"
+  ],
+
+  "name": "On A Stick",
+  "icon": "assets/onastick/icon.png",
+  "description": "Adds things on sticks!",
+
+  "authors": [
+    "Gaetano Russo (Ninni)",
+    "Daniel Orr (Andante)"
+  ],
+  "contact": {
+    "homepage": "https://moddingplayground.net/onastick",
+    "sources": "https://github.com/moddingplayground/onastick-fabric",
+    "issues": "https://github.com/moddingplayground/onastick-fabric/issues"
+  },
+  "custom": {
+    "modmenu": { "links": { "mod.onastick.contact.discord": "https://discord.moddingplayground.net" } }
+  },
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [ "net.moddingplayground.onastick.impl.OnAStickImpl" ],
+    "fabric-datagen": [ "net.moddingplayground.onastick.impl.data.OnAStickDataGeneratorImpl" ]
+  },
+  "mixins": [ "onastick.mixins.json" ],
+
+  "depends": {
+    "java": ">=17",
+    "minecraft": ">=1.19",
+    "fabricloader": ">=0.14",
+    "fabric": ">=0.56",
+    "frame": ">=0.18"
+  }
+}

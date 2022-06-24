@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "onastick:item/loom_on_a_stick"
+  }
+}

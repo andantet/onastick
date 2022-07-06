@@ -1,4 +1,4 @@
-buildscript { dependencies { classpath 'org.kohsuke:github-api:1.303' } }
+buildscript { dependencies { classpath 'org.kohsuke:github-api:1.301' } }
 
 plugins {
   id 'java-library'
@@ -56,13 +56,17 @@ dependencies {
   modImplementation "com.terraformersmc:modmenu:${project.ver_mod_menu}"
 }
 
+/* Loom */
+
+loom {
+  runtimeOnlyLog4j = true
+}
+
 /* Data Generation */
 
 def dataOutput = 'src/generated/resources'
 
 loom {
-  runtimeOnlyLog4j = true
-
   runs {
     datagen {
       server()
@@ -107,7 +111,18 @@ jar { from('README.md', 'LICENSE', 'LICENSE_ASSETS') exclude('.cache') }
 
 /* Publishing */
 
-publishing { publications { mavenJava(MavenPublication) { from components.java } } }
+java { withSourcesJar() }
+
+publishing {
+  publications {
+    mavenJava(MavenPublication) {
+      artifact(remapJar) { builtBy remapJar }
+      artifact(sourcesJar) { builtBy remapSourcesJar }
+    }
+  }
+}
+
+loom { disableDeprecatedPomGeneration(publishing.publications.mavenJava) }
 
 /* Releasing */
 
@@ -160,8 +175,8 @@ if (ENV.CURSEFORGE_API_KEY) curseforge {
     mainArtifact(remapJar) {
       displayName = VER_NAME
       relations {
-        requiredLibrary 'fabric-api'
-        requiredLibrary 'frame-api'
+        requiredDependency 'fabric-api'
+        requiredDependency 'frame-api'
       }
     }
 

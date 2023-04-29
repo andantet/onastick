@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:stick",
+    {
+      "id": "#minecraft:sticks",
+      "required": false
+    },
+    {
+      "id": "#c:sticks",
+      "required": false
+    }
+  ]
+}

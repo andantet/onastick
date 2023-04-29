@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "onastick",
+  "version": "${version}",
+  "name": "On A Stick",
+  "description": "Adds things on sticks!",
+  "authors": [
+    "Daniel Orr (Andante)",
+    "Gaetano Russo (Ninni)"
+  ],
+  "contributors": [
+    "Ellpeck (Creator of Actually Additions, added Crafting Table On A Stick)"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/onastick",
+    "sources": "https://github.com/andantet/onastick",
+    "issues": "https://github.com/andantet/onastick/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/onastick/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.andante.onastick.OnAStick"
+      }
+    ],
+    "fabric-datagen": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.andante.onastick.data.OnAStickDataGeneration"
+      }
+    ]
+  },
+  "accessWidener": "onastick.accesswidener",
+  "depends": {
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*",
+    "minecraft": ">=1.19.4"
+  }
+}

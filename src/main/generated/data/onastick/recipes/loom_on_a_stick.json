@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "group": "onastick:sticks",
+  "ingredients": [
+    {
+      "tag": "onastick:wooden_sticks"
+    },
+    {
+      "tag": "onastick:crafts/loom_on_a_stick"
+    }
+  ],
+  "result": {
+    "item": "onastick:loom_on_a_stick"
+  }
+}

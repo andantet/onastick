@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "onastick:crafting_table_on_a_stick",
+    "onastick:smithing_table_on_a_stick",
+    "onastick:loom_on_a_stick",
+    "onastick:cartography_table_on_a_stick",
+    "onastick:grindstone_on_a_stick",
+    "onastick:anvil_on_a_stick",
+    "onastick:stonecutter_on_a_stick"
+  ]
+}

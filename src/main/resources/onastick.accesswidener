@@ -1,0 +1,9 @@
+accessWidener v2 named
+
+accessible  field   net/minecraft/block/CraftingTableBlock      TITLE           Lnet/minecraft/text/Text;
+accessible  field   net/minecraft/block/SmithingTableBlock      SCREEN_TITLE    Lnet/minecraft/text/Text;
+accessible  field   net/minecraft/block/LoomBlock               TITLE           Lnet/minecraft/text/Text;
+accessible  field   net/minecraft/block/CartographyTableBlock   TITLE           Lnet/minecraft/text/Text;
+accessible  field   net/minecraft/block/GrindstoneBlock         TITLE           Lnet/minecraft/text/Text;
+accessible  field   net/minecraft/block/AnvilBlock              TITLE           Lnet/minecraft/text/Text;
+accessible  field   net/minecraft/block/StonecutterBlock        TITLE           Lnet/minecraft/text/Text;

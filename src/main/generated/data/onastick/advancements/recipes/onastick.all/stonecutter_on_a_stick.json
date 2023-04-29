@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "onastick:crafts/grindstone_on_a_stick"
+            "tag": "onastick:crafts/stonecutter_on_a_stick"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "onastick:grindstone_on_a_stick"
+        "recipe": "onastick:stonecutter_on_a_stick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "onastick:grindstone_on_a_stick"
+      "onastick:stonecutter_on_a_stick"
     ]
   }
 }

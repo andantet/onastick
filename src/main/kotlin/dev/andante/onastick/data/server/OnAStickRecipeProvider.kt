@@ -4,20 +4,19 @@ import dev.andante.onastick.OnAStick
 import dev.andante.onastick.item.OnAStickItems
 import dev.andante.onastick.tag.OnAStickItemTags
 import java.util.function.Consumer
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider
 import net.minecraft.data.server.recipe.RecipeJsonProvider
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder
 import net.minecraft.item.Item
-import net.minecraft.recipe.book.RecipeCategory
-import net.minecraft.registry.tag.TagKey
+import net.minecraft.tag.TagKey
 import net.minecraft.util.Identifier
 
 /**
  * Generates On A Stick recipes.
  */
-class OnAStickRecipeProvider(out: FabricDataOutput) : FabricRecipeProvider(out) {
-    override fun generate(exporter: Consumer<RecipeJsonProvider>) {
+class OnAStickRecipeProvider(generator: FabricDataGenerator) : FabricRecipeProvider(generator) {
+    override fun generateRecipes(exporter: Consumer<RecipeJsonProvider>) {
         registerStick(OnAStickItems.CRAFTING_TABLE_ON_A_STICK, OnAStickItemTags.CRAFTS_CRAFTING_TABLE_ON_A_STICK, exporter)
         registerStick(OnAStickItems.SMITHING_TABLE_ON_A_STICK, OnAStickItemTags.CRAFTS_SMITHING_TABLE_ON_A_STICK, exporter)
         registerStick(OnAStickItems.LOOM_ON_A_STICK, OnAStickItemTags.CRAFTS_LOOM_ON_A_STICK, exporter)
@@ -28,7 +27,7 @@ class OnAStickRecipeProvider(out: FabricDataOutput) : FabricRecipeProvider(out) 
     }
 
     private fun registerStick(item: Item, tagKey: TagKey<Item>, exporter: Consumer<RecipeJsonProvider>) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.TOOLS, item)
+        ShapelessRecipeJsonBuilder.create(item)
             .criterion("has_base", conditionsFromTag(tagKey))
             .group(CRAFTING_GROUP)
             .input(OnAStickItemTags.WOODEN_STICKS)

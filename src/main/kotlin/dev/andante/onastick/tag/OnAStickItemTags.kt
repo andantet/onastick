@@ -2,9 +2,9 @@ package dev.andante.onastick.tag
 
 import dev.andante.onastick.OnAStick
 import net.minecraft.item.Item
-import net.minecraft.registry.RegistryKeys
-import net.minecraft.registry.tag.TagKey
+import net.minecraft.tag.TagKey
 import net.minecraft.util.Identifier
+import net.minecraft.util.registry.Registry
 
 object OnAStickItemTags {
     /**
@@ -26,6 +26,6 @@ object OnAStickItemTags {
     var CRAFTS_STONECUTTER_ON_A_STICK = register("crafts/stonecutter_on_a_stick")
 
     private fun register(id: String): TagKey<Item> {
-        return TagKey.of(RegistryKeys.ITEM, Identifier(OnAStick.MOD_ID, id))
+        return TagKey.of(Registry.ITEM_KEY, Identifier(OnAStick.MOD_ID, id))
     }
 }

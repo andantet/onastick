@@ -1,6 +1,6 @@
-// 1.19.4	2023-04-29T13:32:07.4980697	On A Stick/Tags for minecraft:item
-3ea292ff1b908fdadbab3167144ba735f78dcd0c data\onastick\tags\items\crafts\crafting_table_on_a_stick.json
+// 1.19.2	2023-04-29T13:59:40.4134548	Tags for minecraft:item
 bccd53fac364350291fbea656ced61c8e91fe992 data\onastick\tags\items\wooden_sticks.json
+3ea292ff1b908fdadbab3167144ba735f78dcd0c data\onastick\tags\items\crafts\crafting_table_on_a_stick.json
 6981782b704c75727c05bf8f0f5af700ac154379 data\onastick\tags\items\crafts\loom_on_a_stick.json
 b589f8161365ee79cd756b47dfa27e64d51db381 data\onastick\tags\items\on_a_stick_items.json
 0e7b7975933ddfb84b49b167467760964bf6ed04 data\onastick\tags\items\crafts\grindstone_on_a_stick.json

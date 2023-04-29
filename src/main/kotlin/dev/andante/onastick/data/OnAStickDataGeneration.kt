@@ -12,12 +12,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
  */
 object OnAStickDataGeneration : DataGeneratorEntrypoint {
     override fun onInitializeDataGenerator(generator: FabricDataGenerator) {
-        val pack: FabricDataGenerator.Pack = generator.createPack()
+        generator.addProvider(::OnAStickModelProvider)
+        generator.addProvider(::OnAStickLanguageProvider)
 
-        pack.addProvider(::OnAStickModelProvider)
-        pack.addProvider(::OnAStickLanguageProvider)
-
-        pack.addProvider(::OnAStickRecipeProvider)
-        pack.addProvider(::OnAStickItemTagProvider)
+        generator.addProvider(::OnAStickRecipeProvider)
+        generator.addProvider(::OnAStickItemTagProvider)
     }
 }

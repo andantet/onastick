@@ -17,10 +17,9 @@ import net.minecraft.block.LoomBlock
 import net.minecraft.block.SmithingTableBlock
 import net.minecraft.block.StonecutterBlock
 import net.minecraft.item.Item
-import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
 import net.minecraft.text.Text
 import net.minecraft.util.Identifier
+import net.minecraft.util.registry.Registry
 
 
 /**
@@ -40,10 +39,10 @@ object OnAStickItems {
     }
 
     private fun register(id: String, item: Item): Item {
-        return Registry.register(Registries.ITEM, Identifier(OnAStick.MOD_ID, id), item)
+        return Registry.register(Registry.ITEM, Identifier(OnAStick.MOD_ID, id), item)
     }
 
     private fun register(id: String, item: (Item.Settings) -> Item): Item {
-        return register(id, item(Item.Settings()))
+        return register(id, item(Item.Settings().group(OnAStickItemGroups.ALL)))
     }
 }

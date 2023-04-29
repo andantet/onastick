@@ -2,22 +2,20 @@ package dev.andante.onastick.data.server.tag
 
 import dev.andante.onastick.item.OnAStickItem
 import dev.andante.onastick.tag.OnAStickItemTags
-import java.util.concurrent.CompletableFuture
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider
 import net.fabricmc.fabric.impl.tag.convention.TagRegistration
 import net.minecraft.item.Items
-import net.minecraft.registry.Registries
-import net.minecraft.registry.RegistryWrapper
-import net.minecraft.registry.tag.ItemTags
+import net.minecraft.tag.ItemTags
 import net.minecraft.util.Identifier
+import net.minecraft.util.registry.Registry
 
 /**
  * Generates On A Stick item tags.
  */
 @Suppress("UnstableApiUsage")
-class OnAStickItemTagProvider(out: FabricDataOutput, registriesFuture: CompletableFuture<RegistryWrapper.WrapperLookup>) : FabricTagProvider.ItemTagProvider(out, registriesFuture) {
-    override fun configure(arg: RegistryWrapper.WrapperLookup) {
+class OnAStickItemTagProvider(generator: FabricDataGenerator) : FabricTagProvider.ItemTagProvider(generator) {
+    override fun generateTags() {
         // wooden sticks
         getOrCreateTagBuilder(OnAStickItemTags.WOODEN_STICKS)
             .add(Items.STICK)
@@ -26,7 +24,7 @@ class OnAStickItemTagProvider(out: FabricDataOutput, registriesFuture: Completab
 
         // on a stick items
         val onAStickItems = getOrCreateTagBuilder(OnAStickItemTags.ON_A_STICK_ITEMS)
-        Registries.ITEM
+        Registry.ITEM
             .filterIsInstance<OnAStickItem>()
             .forEach(onAStickItems::add)
 

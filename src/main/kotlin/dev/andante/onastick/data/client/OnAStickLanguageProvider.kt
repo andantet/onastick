@@ -3,13 +3,13 @@ package dev.andante.onastick.data.client
 import dev.andante.onastick.OnAStick
 import dev.andante.onastick.item.OnAStickItemGroups
 import dev.andante.onastick.item.OnAStickItems
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider
 
 /**
  * Generates On A Stick language files.
  */
-class OnAStickLanguageProvider(out: FabricDataOutput) : FabricLanguageProvider(out) {
+class OnAStickLanguageProvider(generator: FabricDataGenerator) : FabricLanguageProvider(generator) {
     override fun generateTranslations(builder: TranslationBuilder) {
         builder.add(OnAStickItemGroups.ALL, OnAStick.MOD_NAME)
 

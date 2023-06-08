@@ -1,4 +1,3 @@
-CHANGELOG FOR 4.0.0+1.19.4:
+CHANGELOG FOR 4.0.0+1.20:
 
-- Updated to 1.19.4
-- Converted to Kotlin
+- Updated to 1.20

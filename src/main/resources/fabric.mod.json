@@ -37,6 +37,6 @@
   "depends": {
     "fabric-api": "*",
     "fabric-language-kotlin": "*",
-    "minecraft": ">=1.19.4"
+    "minecraft": ">=1.20"
   }
 }

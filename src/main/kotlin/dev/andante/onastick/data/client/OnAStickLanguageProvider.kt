@@ -11,7 +11,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider
  */
 class OnAStickLanguageProvider(out: FabricDataOutput) : FabricLanguageProvider(out) {
     override fun generateTranslations(builder: TranslationBuilder) {
-        builder.add(OnAStickItemGroups.ALL, OnAStick.MOD_NAME)
+        builder.add(OnAStickItemGroups.ALL_TRANSLATION_KEY, OnAStick.MOD_NAME)
 
         builder.add(OnAStickItems.CRAFTING_TABLE_ON_A_STICK, "Crafting Table On A Stick")
         builder.add(OnAStickItems.SMITHING_TABLE_ON_A_STICK, "Smithing Table On A Stick")
